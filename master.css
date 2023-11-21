@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    user-select: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color--: rgba(100 0 255);
+    --light-color--: rgba(255 255 255);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(230, 230, 230);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.full-close-btn {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: fixed;
+    z-index: 999;
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 0px 15px rgba(0 0 0 / 15%);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-color--);
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Blaka', sans-serif;
+    color: var(--main-color--);
+    font-size: 2.2em;
+    padding-bottom: 10px;
+}
+
+.add-product {
+    font-size: 1em;
+    padding: 5px 10px;
+    background-color: #f39c12;
+    font-weight: 900;
+    color: white;
+    border-radius: 4px;
+    transition: 0.1s;
+}
+
+.add-product:hover {
+    background-color: #9e660d;
+}
+
+.add-product i {
+    margin-left: 5px;
+}
+
+.main {
+    width: 100%;
+}
+
+.search-box {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-box input {
+    font-size: 0.9em;
+    border: 1px solid rgba(0 0 0);
+    outline: none;
+    font-weight: 900;
+    width: 95%;
+    height: 50px;
+    padding: 5px 10px;
+    padding-right: 50px;
+    border-radius: 7px;
+    direction: rtl;
+    background-color: white;
+    align-items: center;
+    text-align: start;
+    box-shadow: 0px 0px 15px rgba(0 0 0 / 15%);
+    justify-content: center;
+    color: black;
+}
+
+.search-box input::placeholder {
+    color: black;
+}
+
+.search-box i {
+    font-size: 1.2em;
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 20px;
+}
+
+.filter-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.filter-btn {
+    width: 95%;
+    border-radius: 7px;
+    height: 50px;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 800;
+    box-shadow: 0px 0px 15px rgba(0 0 0 / 15%);
+    background-color: white;
+    border: 1px solid white;
+}
+
+.filter-btn i {
+    margin-left: 10px;
+}
+
+.filter-list {
+    width: 250px;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    border: 4px solid white;
+    outline: 2px solid #f39c12;
+    z-index: 99999999999999999;
+    top: 45px;
+    left: 10px;
+    display: none;
+}
+
+.filter-list .hr {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.filter-list a {
+    display: flex;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f39c12;
+    width: 100%;
+    transition: 0.1s;
+}
+
+.filter-list a:hover {
+    background-color: #9e660d;
+}
+
+.numbre-products {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 7px;
+    text-align: end;
+    width: 95%;
+}
+
+.hr {
+    margin-bottom: 40px;
+    width: 90%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: gray;
+}
+
+.card {
+    box-shadow: 0px 0px 15px rgba(0 0 0 / 15%);
+    width: 95%;
+    background-color: white;
+    margin: 10px auto;
+    display: block;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card .img {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    border: 2px solid var(--main-color--);
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px var(--main-color--);
+    background-color: var(--main-color--);
+}
+
+.card .help {
+    position: absolute;
+    top: 242px;
+    left: 12px;
+    z-index: 9999;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 800;
+    background-color: var(--main-color--);
+    border-radius: 0 5px 0 0;
+    padding: 5px 10px;
+}
+
+.card .img img {
+    height: 100%;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.card .product-name {
+    width: 100%;
+    text-align: end;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.card .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.card .info .seller-name {
+    font-size: 1.1em;
+    font-weight: 800;
+    color: var(--main-color--);
+}
+
+
+.card .info .product-prise {
+    font-size: 1.1em;
+    font-weight: 800;
+    color: red;
+    position: relative;
+}
+
+.card .info .product-prise::before {
+    position: absolute;
+    content: "ج";
+    top: -2px;
+    left: -14px;
+}
+
+.card .seller-contact {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: var(--main-color--);
+    box-shadow: 0px 0px 10px var(--main-color--);
+    transition: 0.1s;
+}
+
+.card .seller-contact:hover {
+    background-color: rgb(50, 0, 150);
+    box-shadow: 0px 0px 10px rgba(50 0 150);
+}
+
+.card .seller-contact i {
+    margin-right: 5px;
+}

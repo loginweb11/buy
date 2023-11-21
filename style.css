@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    user-select: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color--: rgba(100 0 255);
+    --light-color--: rgba(255 255 255);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(230, 230, 230);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 0px 15px rgba(0 0 0 / 15%);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-color--);
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Blaka', sans-serif;
+    color: var(--main-color--);
+    font-size: 2.2em;
+    padding-bottom: 10px;
+}
+
+.add-product {
+    font-size: 1em;
+    padding: 5px 10px;
+    background-color: #f39c12;
+    font-weight: 900;
+    color: white;
+    border-radius: 4px;
+    transition: 0.1s;
+}
+
+.add-product:hover {
+    background-color: #9e660d;
+}
+
+.add-product i {
+    margin-left: 5px;
+}
+
+.main {
+    background-color: white;
+    width: 95%;
+    height: fit-content;
+    padding: 10px;
+    box-shadow: 0px 0px 15px rgba(0 0 0 / 15%);
+}
+
+.main img {
+    box-shadow: 0px 0px 15px rgba(0 0 0 / 15%);
+    width: 100%;
+    border: 2px solid white;
+}
+
+.main p {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.main .hr {
+    width: 90%;
+    height: 1px;
+    background-color: gray;
+    margin: 5px auto;
+}
+
+.main a {
+    color: var(--main-color--);
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.main a i{
+    margin-left: 5px;
+}
